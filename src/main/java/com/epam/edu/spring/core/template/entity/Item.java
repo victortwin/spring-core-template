@@ -5,11 +5,13 @@ public class Item {
     private long id;
     private String name;
     private double price;
+    private String color;
 
-    public Item(long id, String name, double price) {
+    public Item(long id, String name, double price, String color) {
         this.id = id;
         this.name = name;
         this.price = price;
+        this.color = color;
     }
 
     public long getId() {
@@ -34,5 +36,13 @@ public class Item {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 }
