@@ -44,8 +44,6 @@ public class SpringCoreTemplate {
 
 		simpleItemService.createItem(new Item(8, "Rope", 6000, "Green"));
 		System.out.println(simpleItemService.getById(8).getName());
-	
-
 	}
 
 }
