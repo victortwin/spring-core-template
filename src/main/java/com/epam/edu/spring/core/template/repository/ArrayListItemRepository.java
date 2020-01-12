@@ -4,6 +4,7 @@ import com.epam.edu.spring.core.template.entity.Item;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 
 /**
@@ -53,6 +54,7 @@ public class ArrayListItemRepository extends AbstractRepository<Item> implements
     }
 
 
+    @PostConstruct
     void setHolder() {
         holder = new ArrayList<>();
         setInitialSequence(getInitialSequenceValue());
