@@ -1,6 +1,7 @@
 package com.epam.edu.spring.core.template;
 
 import com.epam.edu.spring.core.template.configuration.MainConfiguration;
+import com.epam.edu.spring.core.template.entity.Item;
 import com.epam.edu.spring.core.template.factory.ColorFactory;
 import com.epam.edu.spring.core.template.initializer.TestDataInitializer;
 import com.epam.edu.spring.core.template.repository.ArrayListItemRepository;
@@ -40,6 +41,9 @@ public class SpringCoreTemplate {
 		ColorFactory colorFactory = context.getBean("colorFactory", ColorFactory.class);
 
 		System.out.println(colorFactory.getColorsList());
+
+		simpleItemService.createItem(new Item(8, "Rope", 6000, "Green"));
+		System.out.println(simpleItemService.getById(8).getName());
 	
 
 	}
